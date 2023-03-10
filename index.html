@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* 이서윤체 폰트 적용을 위한 코드 */
+      @font-face {
+        font-family: "LeeSeoyun";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      /* body태그 자체에 css 요소 부여 */
+        body {
+	        font-family: "LeeSeoyun";
+	        margin: 0;
+	        display: flex;
+	        justify-content: center;
+	        background-image: url("./background.png");
+        }
+
+        /* 너비는 390픽셀이구, 배경색이 좀 필요하고 부모(body) 높이 전체를 쓸거야 */
+        .container {
+	        width: 390px;
+	        background-color: #93bfc5;
+	        height: 100%;
+        }
+
+        /* 위로 여유가 30픽셀 정도 있었으면 좋겠네 */
+        .photos {
+	        margin-top: 30px;
+        }
+
+        /* 배경은 알아보기 쉽게 흰색으로 해주고, 좌우 마진은 20픽셀 */
+        /* 상하 마진은 15픽셀로 해줘. 높이는 각 사진마다 200 픽셀로!*/
+        .photo-frame {
+	        background-color: white;
+	        margin: 15px 20px;
+	        height: 200px;
+            background-size: 9.5cm;
+            position: relative;
+            background-color: rgb(255, 255, 255);
+            margin: 15px 20px;
+	        height: 200px;
+	        background-size: cover;
+        }
+
+        .photo-description {
+	    /* 배경은 검게, 글자는 흰 색으로 */
+	        color: rgb(255, 255, 255);
+	        background-color: rgb(69, 99, 104);
+
+	    /* 가로 너비는 내부 콘텐츠에 딱 맞게! */
+	        width: fit-content;
+	        padding: 0 20px;
+	        margin-bottom: 10px;
+
+	    /* 경계선 (69, 99, 104) */
+	        border-radius: 10px;
+
+        /*  글씨를 중앙 하단으로 이동
+            position: absolute;
+            bottom: 0;
+            transform: translate(-50%);
+            left: 50%;  */
+
+	        width: fit-content;
+	        padding: 0 20px;
+	        margin-bottom: 10px;
+	        border-radius: 10px;
+	
+        }
+
+
+        /* 아래 영역 전체는, flexible하게 하되 그 내부 아이템들은 세로로 쌓을거야 */
+        /* 근데 모두 가운데 정렬 했으면 좋겠어! */
+        .footer {
+	        display: flex;
+	        flex-direction: column;
+	        align-items: center;
+        }
+
+        /* 아래 영역의 제목 부분은 폰트가 좀 두껍고, 사이즈는 25픽셀! 흰색으로 */
+        .f-title {
+	        font-size: 25px;
+	        font-weight: 900;
+	        color: rgb(255, 255, 255);
+        }
+
+        .f-date {
+          font-size: 18px;
+          font-weight: 500;
+          color: rgb(23, 24, 26);
+        }
+
+        /* opacity : 투명도를 의미해요! opacity는 1에 가까워 질 수록 불투명하다. 즉 다 보인다. */
+        /*.showText {
+	        opacity: 1;
+            transition: opacity 0.5s linear;
+        }*/
+
+        /* opacity : 투명도를 의미해요! opacity는 0에 가까워 질 수록 투명하다. 즉 안보인다. */
+        /* transition : 나타날 때 0.5초동안 천천히 나타나는 효과를 주라는 의미에요 */
+        /* .hideText {
+	        opacity: 0;
+        }*/
+
+        #image1 {
+	        background-image: url("./img11.png");
+        }
+
+        #image2 {
+	        background-image: url("./img44.png");
+        }
+
+        #image3 {
+	        background-image: url("./img33.png");
+        }
+
+        #image4 {
+	        background-image: url("./img22.png");
+        }
+
+    </style>
+    <script>
+
+    </script>
+</head>
+<body>
+
+    <div class="container">
+    <div class="photos">
+      <div id="image1" class="photo-frame">
+        <span id="desc1" class="photo-description">
+            베트남 가는 비행기☆
+        </span>
+      </div>
+
+      <div id="image2" class="photo-frame">
+        <span id="desc2" class="photo-description">
+            지혜는 카페 알바중♪
+        </span>
+      </div>
+
+      <div
+      id="image3" class="photo-frame">
+        <span id="desc3" class="photo-description">
+             카페 데이트♡
+        </span> 
+      </div>
+      
+      <div id="image4" class="photo-frame">
+        <span id="desc4" class="photo-description">
+             까사브라질 가는날
+        </span>
+      </div>
+     </div>
+      <div class="footer">
+        <p class="f-title">엄마 생일 축하해! 엄청 사랑해 </p> 
+        <p class="f-date">2023.03.15</p>
+      </div>
+      </div>
+ 
+</body>
+</html>
